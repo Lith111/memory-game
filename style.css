@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    font-family: Arial, tahoma, sans-serif;
+    background-image: url(images/home-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+img{
+    width: 140px;
+    height: 140px;
+    margin: 30px 0 0;
+}
+.control-buttons{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: hsla(331, 78%, 59%, 0.6);
+  
+}
+.control-buttons span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+    background-color: #e84393;
+    color: #fff;
+    font-weight: 700;
+    width: 350px;
+    height: 100px;
+    padding: 15px;
+    font-size: 50px;
+    border-radius: 14px;
+    cursor: pointer;
+    -webkit-transform: translate(-50% ,-50%);
+    -moz-transform: translate(-50% ,-50%);
+    -ms-transform: translate(-50% ,-50%);
+    -o-transform: translate(-50% ,-50%);
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+}
+.info-container{
+    margin: 100px auto 40px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e84393;
+    color: #555;
+    height: 70px;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 200;
+}
+.box-container{
+    width: 1200px;
+    margin: 0 auto;
+    border: 5px solid #fff;
+    display: flex;
+    flex-wrap:wrap ;
+    background-color: #e843932b;
+}
+.box-container.not-click{
+ pointer-events: none;
+}
+.box{
+    height: 200px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+    margin: 20px 10px 20px;
+    flex: 1  0 200px;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
+}
+.front{
+background-color: #555;
+line-height: 200px;
+font-size: 100px;
+color: #fff;
+}
+.back{
+     background-color: #fff;
+     transform: rotateY(180deg);
+     -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+     -ms-transform: rotateY(180deg);
+     -o-transform: rotateY(180deg);
+}
+
+.box.filpped
+,.box.has-match{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    
+}
+.face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 5px solid #fff;
+}
